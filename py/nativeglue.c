@@ -344,6 +344,7 @@ const mp_fun_table_t mp_fun_table = {
     &mp_stream_readinto_obj,
     &mp_stream_unbuffered_readline_obj,
     &mp_stream_write_obj,
+    &mp_arg_parse_all_kw_array,
 };
 
 #elif MICROPY_EMIT_NATIVE && MICROPY_DYNAMIC_COMPILER

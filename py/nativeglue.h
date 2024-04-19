@@ -83,6 +83,7 @@ typedef enum {
     MP_F_NATIVE_YIELD_FROM,
     MP_F_SETJMP,
     MP_F_NUMBER_OF,
+    MP_F_ARG_PARSE_ALL_KW_ARRAY,
 } mp_fun_kind_t;
 
 typedef struct _mp_fun_table_t {
@@ -170,6 +171,7 @@ typedef struct _mp_fun_table_t {
     const mp_obj_fun_builtin_var_t *stream_readinto_obj;
     const mp_obj_fun_builtin_var_t *stream_unbuffered_readline_obj;
     const mp_obj_fun_builtin_var_t *stream_write_obj;
+    void (*arg_parse_all_kw_array)(size_t n_pos, size_t n_kw, const mp_obj_t *args, size_t n_allowed, const mp_arg_t *allowed, mp_arg_val_t *out_vals);
 } mp_fun_table_t;
 
 #if (MICROPY_EMIT_NATIVE && !MICROPY_DYNAMIC_COMPILER) || MICROPY_ENABLE_DYNRUNTIME
