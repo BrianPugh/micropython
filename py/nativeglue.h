@@ -97,6 +97,7 @@ typedef struct _mp_fun_table_t {
     mp_obj_t (*load_build_class)(void);
     mp_obj_t (*load_attr)(mp_obj_t base, qstr attr);
     void (*load_method)(mp_obj_t base, qstr attr, mp_obj_t *dest);
+    void (*mp_load_method_maybe)(mp_obj_t base, qstr attr, mp_obj_t *dest);
     void (*load_super_method)(qstr attr, mp_obj_t *dest);
     void (*store_name)(qstr qst, mp_obj_t obj);
     void (*store_global)(qstr qst, mp_obj_t obj);

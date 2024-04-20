@@ -267,6 +267,7 @@ const mp_fun_table_t mp_fun_table = {
     mp_load_build_class,
     mp_load_attr,
     mp_load_method,
+    mp_load_method_maybe,
     mp_load_super_method,
     mp_store_name,
     mp_store_global,

@@ -193,6 +193,7 @@ static inline void *mp_obj_malloc_helper_dyn(size_t num_bytes, const mp_obj_type
 #define mp_load_global(qst)               (mp_fun_table.load_global((qst)))
 #define mp_load_attr(base, attr)          (mp_fun_table.load_attr((base), (attr)))
 #define mp_load_method(base, attr, dest)  (mp_fun_table.load_method((base), (attr), (dest)))
+#define mp_load_method_maybe(base, attr, dest) (mp_load_method_maybe((base), (attr), (dest)))
 #define mp_load_super_method(attr, dest)  (mp_fun_table.load_super_method((attr), (dest)))
 #define mp_store_name(qst, obj)           (mp_fun_table.store_name((qst), (obj)))
 #define mp_store_global(qst, obj)         (mp_fun_table.store_global((qst), (obj)))
